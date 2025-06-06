@@ -1,0 +1,372 @@
+/* General Styles */
+body {
+    background-color: #1a1f24;
+    color: #d3e3f2;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('library.png');
+    backdrop-filter: blur(3px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* Container for content */
+#library-container {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background: rgba(23, 31, 39, 0.9);
+    padding: 20px 10px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Change the header text color to red */
+header h1 {
+    color: #ffc107;
+    font-size: 2.2rem;
+}
+
+header p {
+    color: #ffc107;
+    font-size: 1.1rem;
+}
+
+/* Ensure content doesn't overlap with the fixed header */
+body::before {
+    content: "";
+    display: block;
+    height: 120px;
+}
+
+/* Search Bar */
+#search-bar-container {
+
+    text-align: center;
+    z-index: 998;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 60%;
+    margin: auto;
+}
+
+.search-wrapper .mdi-magnify {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000; /* Adjust the color as needed */
+    font-size: 1.2em; /* Adjust size as needed */
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Make padding-left larger to accommodate the icon */
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #d8cdcd; /* Dark shade for the background */
+    border: none;
+    color: #000000; /* White text */
+}
+
+#search-bar::placeholder {
+    color: #000000; /* Light gray placeholder text */
+}
+
+#search-bar:focus {
+    outline: none; /* Removes the outline on focus */
+    background-color: #d8cdcd  /* Slightly lighter shade on focus */
+}
+
+.form-control{
+
+    align-content: center;
+}
+/* Navigation Tags */
+nav#tags {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    z-index: 997;
+    position: relative;
+}
+
+nav#tags .btn {
+    background-color: #d8cdcd !important;
+    color: #000000 !important;
+    border: 1px solid #ffc107 !important;
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav#tags .btn:hover {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+/* Content Sections */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-bottom: 100px; /* Add padding to ensure the content doesn't overlap with the footer */
+}
+
+.content-section {
+    width: 23%;
+    background-color: rgba(34, 43, 52, 0.9);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+}
+
+.content-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #ffc107;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.info h3 a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.info h3 a:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 203, 107, 0.7);
+}
+
+.info p {
+    margin: 5px 0;
+    color: #b0b0b0;
+}
+
+/* Footer */
+footer {
+    background: rgba(34, 43, 52, 0.9);
+    color: #e0f0f6;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social-media a {
+    font-size: 20px;
+    margin: 0 5px;
+    background: none;
+    border: none;
+    color: #e0f0f6;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #search-bar {
+        width: 90%;
+    }
+
+    nav#tags .btn {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    /* Adjust the boxes to stack and fit the screen */
+    .content-section {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .info h3 {
+        font-size: 1.1em;
+    }
+
+    .info p {
+        font-size: 0.9em;
+    }
+
+    #content {
+        padding-bottom: 120px; /* Adjust padding for mobile to prevent overlap */
+    }
+
+    .burger-menu {
+        font-size: 22px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .btn-close {
+        font-size: 1.1rem;
+    }
+}
+
+/* Footer */
+footer {
+    background: rgba(34, 43, 52, 0.9); /* Frosty footer */
+    color: #e0f0f6; /* Frost-like text */
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social-media a {
+    font-size: 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d3e3f2;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: translateY(-3px);
+    color: #ffc107;
+}
+
+
+/* Burger Menu and Sidebar */
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffc107;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 200;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: rgba(34, 43, 52, 0.9); /* Frosty blue-gray */
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.85);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2rem;
+    color: #6c3a2a; /* Burgundy close button */
+    border: none;
+}
+
+.sidebar .nav-button {
+    display: block;
+    color: #e0e0e0; /* Light text for nav buttons */
+    text-align: left;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar .nav-button:hover {
+    background-color: #3a3a4d; /* Deep grey-blue on hover */
+    color: #ffc107; /* Amber on hover */
+}
+
+/* Sidebar Menu Button Styling */
+.sidebar .btn {
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    color: #faf3e0; /* Off-white */
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .btn:hover {
+    background-color: #ffc107;
+    color: #ffffff;
+}

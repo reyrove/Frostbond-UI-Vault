@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(26, 34, 56, 0.8), rgba(13, 27, 42, 0.8)), url('home.png') center/cover no-repeat;
+    color: #ffffff;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes footer to the bottom */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #313c4a, #243952, #192c4e); 
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    color: rgba(189, 229, 255, 0.8);
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 30px #a4c6ff, 0 0 50px #bfdfff, 0 0 70px #8faeff;
+    }
+    to {
+        text-shadow: 0 0 40px #7f95bf, 0 0 60px #4f628e, 0 0 80px #1e3a60;
+    }
+}
+
+/* Central Image */
+.central-image {
+    margin-bottom: 50px; /* Add margin to push the buttons down */
+}
+
+.central-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(110, 159, 255, 0.8), 0 0 60px rgba(80, 130, 200, 0.6), 0 0 90px rgba(140, 100, 255, 0.4);
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Button Grid Styles */
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.button-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Buttons */
+.modern-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(135deg, #4e6c91, #5b7ca3, #6b8cc6);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    width: 150px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+}
+
+.modern-button span {
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.modern-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px #a4c6ff, 0 0 50px #8faeff;
+    background: linear-gradient(135deg, #6b8cc6, #5b7ca3, #4e6c91);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #313c4a, #243952, #192c4e);  
+    color: #d3e3f2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Social Media Icons */
+.social-media .btn {
+    font-size: 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d3e3f2;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media .btn:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 30px #a4c6ff, 0 0 50px #8faeff; /* Text-shadow inside the icon */
+    color: #ffffff;
+}
+
+.social-media {
+    margin-top: 10px;
+}  
+
+/* Media Queries */
+
+/* iPad portrait (768px) - Center Buttons */
+@media (max-width: 768px) {
+    .central-image {
+        margin-bottom: 60px; /* Increase margin below the logo */
+    }
+
+    .modern-button {
+        width: 140px;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Falling Stars */
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    animation: fall linear;
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 100vh;
+    }
+}

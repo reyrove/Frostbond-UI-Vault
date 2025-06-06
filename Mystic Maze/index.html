@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Maze</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="text-center py-4 bg-dark text-light">
+        <h1>Welcome to Our Mystical Bath</h1>
+        <p>A peaceful haven where water soothes and serenity surrounds</p>        
+        <!-- Burger Menu Icon -->
+        <div class="burger-menu" onclick="openMenu()">&#9776;</div>
+    </header>
+
+    <!-- Burger Menu Sidebar -->
+    <nav class="sidebar bg-dark text-light p-3" id="burgerMenu" style="display: none;">
+        <div class="text-end mb-4">
+            <button class="btn-close" aria-label="Close" onclick="closeMenu()">×</button>
+        </div>
+        <button class="btn btn-outline-light w-100 mb-3" onclick="location.href='';">Back to Frozen Sanctuary</button>
+        <button class="btn btn-outline-light w-100 mb-3" onclick="location.href='';">Living Room</button>
+        <button class="btn btn-outline-light w-100 mb-3" onclick="location.href='';">Kitchen</button>
+        <button class="btn btn-outline-light w-100 mb-3" onclick="location.href='';">Library</button>
+        <button class="btn btn-outline-light w-100 mb-3" onclick="location.href='';">Art Studio</button>
+        <button class="btn btn-outline-light w-100 mb-3" onclick="location.href='';">Bedroom</button>
+        <button class="btn btn-outline-light w-100 mb-3" onclick="location.href='';">Attic</button>
+    </nav>
+
+    <!-- Game Guide Section -->
+    <section class="container my-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">How to Play</h2>
+                <p class="card-text">Welcome to the Frozen Sanctuary Maze! Guide Sparrow through the maze using your arrow keys on desktop or by swiping on your phone. Your mission? Find the magical bathtub while avoiding the slippery icy paths! The quicker you reach it, the warmer Sparrow will stay. Can you keep Sparrow cozy? 🛁💖
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maze Game Container -->
+    <div class="container text-center my-4">
+        <h2>Navigate the Maze</h2>
+        <p>Help Sparrow find the warm bathtub in this frozen maze. Watch out for icy paths!</p>
+        <canvas id="mazeCanvas" width="500" height="500" class="mx-auto"></canvas>
+        <div id="bubbles" class="bubbles">
+            <!-- Bubbles will be added dynamically -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 text-center">
+        © 2024 The Frostbond Coders. All rights reserved.
+        <div class="social-media mt-3">
+            <a href="#" target="_blank" class="btn btn-outline-light mx-2">
+                <i class="mdi mdi-github"></i>
+
+            <a href="#" target="_blank" class="btn btn-outline-light mx-2">
+                <i class="mdi mdi-facebook"></i>
+            <a href="#" target="_blank" class="btn btn-outline-light mx-2">
+                <i class="mdi mdi-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="btn btn-outline-light mx-2">
+                <i class="mdi mdi-twitter"></i>
+            </a>
+            <a href="#" target="_blank" class="btn btn-outline-light mx-2">
+                <i class="mdi mdi-linkedin"></i>
+            </a>
+            <a href="#" target="_blank" class="btn btn-outline-light mx-2">
+                <i class="mdi mdi-youtube"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

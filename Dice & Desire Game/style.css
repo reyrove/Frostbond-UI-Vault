@@ -1,0 +1,307 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    color: #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(52, 26, 56, 0.8), rgba(8, 10, 73, 0.8)), url('bedroom.png') center/cover no-repeat;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background: rgba(97, 3, 107, 0.85);
+    color: #dcdcdc;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: rgba(189, 229, 255, 0.9);
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #d3e3f2;
+    margin: 0; /* Adjust or remove if unnecessary */
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 150px;
+}
+
+/* Dice Container */
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    position: relative;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Dice Styles */
+.dice {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.dice-face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #3e2c41;
+    color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: 2px solid #dcdcdc;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.front { transform: translateZ(75px); }
+.back { transform: rotateY(180deg) translateZ(75px); }
+.left { transform: rotateY(-90deg) translateZ(75px); }
+.right { transform: rotateY(90deg) translateZ(75px); }
+.top { transform: rotateX(90deg) translateZ(75px); }
+.bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+/* Dice rolling animation */
+.dice.rolling {
+    animation: rollDice 1s ease-in-out forwards;
+}
+
+@keyframes rollDice {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    25% { transform: rotateX(90deg) rotateY(0deg); }
+    50% { transform: rotateX(90deg) rotateY(90deg); }
+    75% { transform: rotateX(180deg) rotateY(90deg); }
+    100% { transform: rotateX(180deg) rotateY(180deg); }
+}
+
+/* Book Styles */
+.book {
+    margin-top: 50px;
+    width: 800px;
+    height: 400px;
+    background-color: rgba(58, 58, 77, 0.5);
+    border: 2px solid #444;
+    display: none;
+    padding: 20px;
+    overflow: auto;
+    color: #dcdcdc;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.book-page {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Button Styles */
+button {
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: #3e2c41;
+    color: #dcdcdc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5a4059;
+}
+
+/* Updated Burger Menu and Sidebar */
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #faf3e0; /* Off-white */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 200;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: #3e2c41; /* Soft beige for sidebar */
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.85);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2rem;
+    color: #6c3a2a; /* Burgundy close button */
+    border: none;
+}
+
+.sidebar .nav-button {
+    display: block;
+    color: #e0e0e0; /* Light text for nav buttons */
+    text-align: left;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar .nav-button:hover {
+    background-color: #3a3a4d; /* Deep grey-blue on hover */
+    color: #ffc107; /* Amber on hover */
+}
+
+/* Updated Sidebar Menu Button Styling */
+.sidebar .btn {
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    color: #faf3e0; /* Off-white */
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .btn:hover {
+    background-color: #c643c9;
+    color: #5e0a50;
+}
+
+/* Footer */
+footer {
+    background: rgba(97, 3, 107, 0.85);  
+    color: #d3e3f2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Social Media Icons */
+.social-media .btn {
+    font-size: 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d3e3f2;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media .btn:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 30px #a4c6ff, 0 0 50px #8faeff; /* Text-shadow inside the icon */
+    color: #ffffff;
+}
+
+.social-media {
+    margin-top: 10px;
+} 
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    /* Reduce dice size for smaller screens */
+    .dice {
+        width: 100px;
+        height: 100px;
+    }
+
+    .dice-face {
+        width: 100px;
+        height: 100px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* Adjust gap between dice */
+    .dice-container {
+        gap: 30px;
+    }
+
+    /* Adjust book width for smaller screens */
+    .book {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Adjust button sizes for mobile */
+    button {
+        padding: 5px 10px;
+    }
+
+    /* Ensure content takes full screen height */
+    .content {
+        height: auto;
+    }
+}

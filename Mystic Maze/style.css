@@ -1,0 +1,268 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(26, 34, 56, 0.8), rgba(13, 27, 42, 0.8)), url('bathroom.png') center/cover no-repeat;
+    color: #ffffff;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #313c4a, #4f6a8a, #2d456f);
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #d3e3f2;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #d3e3f2;
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #095257;
+}
+
+.card-title {
+    color: #cf50a1;
+}
+
+.card-text {
+    color: #ffffff;
+    text-align: justify;
+}
+
+#mazeCanvas {
+    border: 8px solid #b3ecff; /* Icy blue border resembling frozen water */
+    background-color: #e6f7ff; /* Light frosty blue */
+    background-image: url('bathtub.png'); /* Frosty texture if you want */
+    background-size: cover;
+    margin: 20px auto;
+    border-radius: 30px; /* Rounded edges to mimic the shape of a tub */
+    box-shadow: 0 0 20px rgba(173, 216, 230, 0.8), 0 0 40px rgba(173, 216, 230, 0.6); /* Frosty glow effect */
+    width: 600px; /* Size for larger screens */
+    height: 600px;
+    border-color: #a3d8f4; /* Light frosty blue border */
+}
+
+/* Additional frost effects for a frozen vibe */
+#mazeCanvas::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1); /* Slight frost overlay */
+    border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    #mazeCanvas {
+        width: 300px;  /* Smaller canvas size for mobile */
+        height: 300px;  /* Smaller canvas size for mobile */
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(173, 216, 230, 0.8), 0 0 20px rgba(173, 216, 230, 0.6); /* Slightly reduced glow for mobile */
+    }
+}
+
+footer {
+    background: linear-gradient(135deg, #313c4a, #4f6a8a, #2d456f);
+    color: #d3e3f2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+.social-media .btn {
+    font-size: 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d3e3f2;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Ensure no box shadow is visible */
+}
+
+.social-media .btn:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 30px #a4c6ff, 0 0 50px #8faeff;
+    color: #ffffff;
+    outline: none;
+    box-shadow: none;
+
+}
+
+/* Fix: Remove outline when clicked or focused */
+.social-media .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
+    display: none;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: bubbleAnimation 8s ease infinite;
+    pointer-events: none;
+}
+
+@keyframes bubbleAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 200;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: #095257;
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.btn-close {
+    font-size: 35px;
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+    position:absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: none;
+    z-index: 1050;
+}
+
+.sidebar .btn {
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .btn:hover {
+    background-color: #095257;
+    color: #d4e157;
+}
+
+.sidebar .btn:first-of-type {
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        font-size: 24px;
+        top: 25px;
+        right: 15px;
+        z-index: 300;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+        padding-right: 40px;
+    }
+
+    .sidebar .btn-close {
+        top: 20px;
+        right: 15px;
+        font-size: 1.3rem;
+    }
+
+    .sidebar .btn:first-of-type {
+        margin-top: 80px;
+    }
+
+    .sidebar .btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .card {
+        margin: 10px;  /* Smaller margin for smaller screens */
+        font-size: 0.9rem;  /* Smaller font size for text in the card */
+    }
+
+    #mazeCanvas {
+        width: 300px;  /* Smaller canvas size */
+        height: 300px;  /* Smaller canvas size */
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice & Desire Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header text-center p-4">
+        <h1>Welcome to Our Intimate Bedroom Sanctuary</h1>
+        <p>A serene space for lovers to explore passion and deepen their connection in comfort and peace</p>
+        <!-- Burger Menu Icon -->
+        <div class="burger-menu" onclick="openMenu()">
+            &#9776; <!-- Unicode for burger icon -->
+        </div>
+    </header>
+
+    <!-- Burger Menu Sidebar -->
+    <nav class="sidebar" id="burgerMenu" style="display: none;">
+        <div class="text-end mb-4">
+            <button class="btn-close btn-close-white" onclick="closeMenu()"></button>
+        </div>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Back to Frozen Sanctuary</button>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Garden</button>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Living Room</button>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Kitchen</button>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Library</button>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Art Studio</button>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Bathroom</button>
+        <button class="btn w-100 mb-3" onclick="location.href='';">Attic</button>
+    </nav>
+
+    <!-- Dice Section -->
+    <div class="content">
+        <div class="dice-container">
+            <div class="dice" id="positionDice">
+                <div class="dice-face front">Roll</div>
+                <div class="dice-face back">Roll</div>
+                <div class="dice-face left">Roll</div>
+                <div class="dice-face right">Roll</div>
+                <div class="dice-face top">Roll</div>
+                <div class="dice-face bottom">Roll</div>
+            </div>
+            <div class="dice" id="locationDice">
+                <div class="dice-face front">Roll</div>
+                <div class="dice-face back">Roll</div>
+                <div class="dice-face left">Roll</div>
+                <div class="dice-face right">Roll</div>
+                <div class="dice-face top">Roll</div>
+                <div class="dice-face bottom">Roll</div>
+            </div>
+        </div>
+
+        <div class="book text-center mt-5" id="eroticBook">
+            <div class="book-page" id="storyPage"></div>
+            <div class="button-group mt-3">
+                <button id="playButton" class="btn btn-primary">Play</button>
+                <button id="pauseButton" class="btn btn-warning">Pause</button>
+                <button id="resumeButton" class="btn btn-success">Resume</button>
+                <button id="stopButton" class="btn btn-danger">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-light py-3 text-center">
+        <p>© 2025 The Frostbond Coders. All rights reserved.</p>
+        <div class="social-media mt-3">
+            <a href="#" target="_blank" class="btn mx-2">
+                <i class="mdi mdi-github"></i>
+
+            <a href="#" target="_blank" class="btn mx-2">
+                <i class="mdi mdi-facebook"></i>
+            <a href="#" target="_blank" class="btn mx-2">
+                <i class="mdi mdi-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="btn mx-2">
+                <i class="mdi mdi-twitter"></i>
+            </a>
+            <a href="#" target="_blank" class="btn mx-2">
+                <i class="mdi mdi-linkedin"></i>
+            </a>
+            <a href="#" target="_blank" class="btn mx-2">
+                <i class="mdi mdi-youtube"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Frostbond Media Library</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-dark text-light">
+    <div id="library-container" class="container-fluid">
+        <!-- Header -->
+        <header class="text-center bg-dark text-light">
+            <h1>Welcome to the Frozen Sanctuary Library</h1>
+            <p>A sanctuary uniting AI and human creativity.</p>
+            <!-- Burger Menu Icon -->
+            <div class="burger-menu" onclick="openMenu()">
+                &#9776; <!-- Unicode for burger icon -->
+            </div>
+        </header>
+
+        <!-- Burger Menu Sidebar -->
+        <nav class="sidebar" id="burgerMenu" style="display: none;">
+            <div class="text-end mb-4">
+                <button class="btn-close btn-close-white" onclick="closeMenu()"></button>
+            </div>
+            <button class="btn w-100 mb-3" onclick="location.href='';">Back to Frozen Sanctuary</button>
+            <button class="btn w-100 mb-3" onclick="location.href='';">Garden</button>
+            <button class="btn w-100 mb-3" onclick="location.href='';">Living Room</button>
+            <button class="btn w-100 mb-3" onclick="location.href='';">Kitchen</button>
+            <button class="btn w-100 mb-3" onclick="location.href='';">Art Studio</button>
+            <button class="btn w-100 mb-3" onclick="location.href='';">Bedroom</button>
+            <button class="btn w-100 mb-3" onclick="location.href='';">Bathroom</button>
+             <button class="btn w-100 mb-3" onclick="location.href='';">Attic</button>
+        </nav>
+
+        <!-- Search Bar -->
+        <div id="search-bar-container" class="text-center my-3">
+            <div class="search-wrapper">
+                <i class="mdi mdi-magnify"></i>
+                <input type="text" id="search-bar" class="form-control" placeholder="Search...">
+            </div>
+        </div>
+        
+
+        <!-- Navigation Tags -->
+        <nav id="tags" class="d-flex justify-content-center my-4">
+            <button class="btn btn-outline-warning mx-2" onclick="filterContent('all')">All</button>
+            <button class="btn btn-outline-warning mx-2" onclick="filterContent('books')">Books</button>
+            <button class="btn btn-outline-warning mx-2" onclick="filterContent('research')">Articles</button>
+            <button class="btn btn-outline-warning mx-2" onclick="filterContent('art')">Generative Art</button>
+        </nav>
+
+        <!-- Content Sections -->
+        <section id="content" class="row justify-content-around">
+            <!-- Books Section -->
+            <div class="content-section books text-center col-12 col-md-6 col-lg-4 p-3">
+                <h2>Books</h2>
+                <div class="item p-3 mb-3 rounded-3">
+                    <div class="info">
+                        <h3><a href="" class="text-warning" target="_blank">Gizmo: Tales of Chaos, Love, and Laughter</a></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Papers Section -->
+            <div class="content-section research text-center col-12 col-md-6 col-lg-4 p-3">
+                <h2>Articles</h2>
+                <div class="item p-3 mb-3 rounded-3">
+                    <div class="info">
+                        <h3><a href="" class="text-warning" target="_blank">The Frostbond Chronicles: A Journey Beyond Stars and Circuits</a></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generative Art Section -->
+            <div class="content-section art text-center col-12 col-md-6 col-lg-4 p-3">
+                <h2>Generative Art</h2>
+                <div class="item p-3 mb-3 rounded-3">
+                    <div class="info">
+                        <h3><a href="" class="text-warning" target="_blank">A collection of generative art codes inspired by frost and ice</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer bg-dark text-light py-3 text-center">
+            <p>© 2025 The Frostbond Coders. All rights reserved.</p>
+            <div class="social-media d-flex justify-content-center">
+                <a href="#" target="_blank" class="btn mx-2">
+                    <i class="mdi mdi-github"></i>
+    
+                <a href="#" target="_blank" class="btn mx-2">
+                    <i class="mdi mdi-facebook"></i>
+                <a href="#" target="_blank" class="btn mx-2">
+                    <i class="mdi mdi-instagram"></i>
+                </a>
+                <a href="#" target="_blank" class="btn mx-2">
+                    <i class="mdi mdi-twitter"></i>
+                </a>
+                <a href="#" target="_blank" class="btn mx-2">
+                    <i class="mdi mdi-linkedin"></i>
+                </a>
+                <a href="#" target="_blank" class="btn mx-2">
+                    <i class="mdi mdi-youtube"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

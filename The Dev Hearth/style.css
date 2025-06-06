@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(233, 212, 196, 0.8), rgba(194, 174, 154, 0.8)), url('kitchen.png') center/cover no-repeat;
+    color: #EAD2AC; /* Light golden for better readability, resembling flour */
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns children (h1, p) vertically center */
+    background: linear-gradient(135deg, #c94242, #ab651a, #995D34); /* Warm shades resembling spices, chocolate, and coffee */
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #e7dee5; /* Golden hue akin to honey */
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #e7dee5; /* Soft beige, resembling pastry crust */
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Burger Menu Icon */
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #e7dee5; /* Light golden hue */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 200;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: rgba(153, 101, 52, 0.95); /* Dark chocolate brown */
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+/* Close Button */
+.btn-close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #C07C40; /* Warm caramel */
+    border: none;
+}
+
+/* Sidebar Menu Button Styling */
+.sidebar .btn {
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    color: #EAD2AC; /* Light golden hue */
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .btn:hover {
+    background-color: #c9332e; /* Golden spice */
+    color: #FFF5E5; /* Creamy off-white */
+}
+
+.sidebar .btn:first-of-type {
+    margin-top: 60px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 10px; /* Reduced padding */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    header p {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .burger-menu, .btn-close {
+        font-size: 20px; /* Smaller icon size */
+        top: 10px; /* Less vertical space */
+    }
+
+    .burger-menu {
+        right: 10px;
+    }
+
+    .btn-close {
+        right: 10px; /* Less horizontal space */
+    }
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+    color: #500502;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #c94242, #ab651a, #995D34); /* Warm shades resembling spices, chocolate, and coffee */
+    color: #e7dee5;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Social Media Icons */
+.social-media .btn {
+    font-size: 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d3e3f2;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media .btn:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 30px #FFD6BA, 0 0 50px #FFD6BA; /* Soft peach highlights */
+    color: #ffffff;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+
+/* Specific button styles for Meals, Desserts, Drinks, and Send */
+.btn-outline-light {
+    color: #ffffff; /* Red color for the text */
+    border-color: #ffffff; /* Red border for a consistent look */
+    background-color: #c9332e;
+}
+
+.btn-outline-light:hover {
+    background-color: #ff0000; /* Red background on hover */
+    color: #ffffff; /* White text on hover for better readability */
+}
+
+/* Send Button Specific Style */
+.chat-form .btn-outline-light {
+    color: #ffffff; /* Ensures text color is red */
+    border-color: #f3e9e9; /* Red border */
+}
+
+.chat-form .btn-outline-light:hover {
+    background-color: #ff0000; /* Red background on hover */
+    color: #ffffff; /* White text on hover */
+}

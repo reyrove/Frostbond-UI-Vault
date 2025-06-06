@@ -1,0 +1,304 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(118, 94, 87, 0.8), rgba(88, 66, 60, 0.8)), url('livingroom.png') center/cover no-repeat;
+    color: #F4EDE4; /* Creamy off-white for better readability */
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns children (h1, p) vertically center */
+    background: linear-gradient(135deg, #704c4c, #563535, #3e2525); /* Warm shades of brown */
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #F4EDE4; /* Creamy off-white */
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #CDBBA7; /* Soft light brown for less stark contrast */
+    margin: 0; /* Adjust or remove if unnecessary */
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Updated Burger Menu Icon */
+.burger-menu {
+    font-size: 24px; /* Reduced size */
+    cursor: pointer;
+    color: #F4EDE4; /* Creamy off-white */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 200;
+}
+
+/* Updated Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: rgba(84, 53, 47, 0.95); /* Darker shade of warm brown */
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+/* Updated Close Button */
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2rem;
+    color: #C0755B; /* Soft terracotta */
+    border: none;
+}
+
+/* Sidebar Menu Button Styling */
+.sidebar .btn {
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    color: #F4EDE4; /* Creamy off-white */
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .btn:hover {
+    background-color: #704c4c; /* Deeper shade of brown */
+    color: #F4EDE4;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+        padding-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header p {
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Adjust Burger Menu for Mobile */
+    .burger-menu {
+        font-size: 22px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .btn-close {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* Main Content Area */
+.container {
+    margin-top: 10px;
+}
+
+/* Music Corner */
+#music-corner {
+    margin-bottom: 5px;
+}
+
+#music-corner h2 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #faf3e0; /* Off-white for section titles */
+}
+
+/* Make Spotify square */
+.spotify-container iframe {
+    width: 60%; /* Adjust width */
+    height: 60vw; /* Make it square with viewport width */
+    max-height: 400px; /* Max height for larger screens */
+    margin: 0 auto;
+    display: block;
+}
+
+#music-corner p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#music-corner iframe {
+    margin-bottom: 0px;
+}
+
+/* Movie of the Month */
+#movie-corner {
+    margin-top: 40px; /* Added spacing between Music Corner and Movie Corner */
+    margin-bottom: 20px;
+}
+
+#movie-corner h2 {
+    margin-bottom: 10px;
+    color: #faf3e0; /* Off-white for section titles */
+}
+
+#movie-corner .movie-description {
+    margin-bottom: 5px;
+}
+
+/* Make Movie square */
+.movie-container iframe {
+    width: 60%; /* Adjust the width */
+    height: 60vw; /* Make it square with viewport width */
+    max-height: 600px; /* Max height for larger screens */
+    margin: 0 auto;
+    display: block;
+}
+
+/* Comments Section */
+.comments-section {
+    width: 100%;
+    max-width: 400px; /* Reduced width for smaller comment section */
+    margin: 0 auto;
+    padding: 15px; /* Smaller padding */
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center; /* Center the text inside the comment section */
+    color: #e6e6e6;
+    background-color: rgba(129, 101, 93, 0.85); /* Muted brown for comment background */
+}
+
+#comments-container {
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(96, 72, 68, 0.9);
+    border-radius: 8px;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+#comment-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000000;
+    font-size: 14px;
+}
+
+#submit-comment {
+    background-color: #704c4c; /* Warm brown */
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #faf3e0; /* Off-white text */
+}
+
+#submit-comment:hover {
+    background-color: #8C6D62; /* Lighter warm brown for hover effect */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #563535, #3e2525, #2d1b1b);
+    color: #F4EDE4;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Social Media Icons */
+.social-media .btn {
+    font-size: 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d3e3f2;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media .btn:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 30px #FFD6BA, 0 0 50px #FFD6BA; /* Soft peach highlights */
+    color: #ffffff;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+        padding-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header p {
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .burger-menu {
+        font-size: 22px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .btn-close {
+        font-size: 1.1rem;
+    }
+}

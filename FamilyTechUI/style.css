@@ -1,0 +1,320 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(26, 34, 56, 0.8), rgba(13, 27, 42, 0.8)), url('garden.png') center/cover no-repeat;
+    color: #ffffff;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns children (h1, p) vertically center */
+    background: linear-gradient(135deg, #313c4a, #243952, #192c4e);
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: rgba(189, 229, 255, 0.9);
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #d3e3f2;
+    margin: 0; /* Adjust or remove if unnecessary */
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Burger Menu Icon */
+.burger-menu {
+    font-size: 24px; /* Reduced size */
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 200;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: rgba(26, 34, 56, 0.95);
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+/* Close Button */
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2rem;
+    color: #d4e157;
+    border: none;
+}
+
+/* Sidebar Menu Button Styling */
+.sidebar .btn {
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%; /* Full width of the sidebar */
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .btn:hover {
+    background-color: #192c4e;
+    color: #d4e157;
+}
+
+.sidebar .btn:first-of-type {
+    margin-top: 60px;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    /* Adjust the Burger Menu for mobile */
+    .burger-menu {
+        font-size: 24px; /* Slightly smaller burger menu icon */
+        top: 25px; /* Increased spacing to push it down */
+        right: 15px; /* Make sure it's further to the right */
+        z-index: 300; /* Ensure it stays above other elements */
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+        padding-right: 40px; /* Add space for the burger menu on mobile */
+    }
+
+    .sidebar .btn-close {
+        top: 20px;
+        right: 15px;
+        font-size: 1.3rem;
+    }
+
+    .sidebar .btn:first-of-type {
+        margin-top: 80px;
+    }
+
+    .sidebar .btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Family Section */
+#family-introductions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#family-introductions h2 {
+    color: #aed581;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Card Container */
+.row-cols-md-2 {
+    justify-content: center; /* Ensures alignment on small screens */
+}
+
+.card {
+    background-color: rgba(34, 53, 41, 0.85);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Fix for image scaling */
+.card-img-top {
+    border-radius: 50%;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+/* Card title and text spacing */
+.card-body {
+    color: #d4e157;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250px; /* Ensures uniform height for all card bodies */
+}
+
+.card-title a {
+    color: #d4e157;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+    margin-bottom: 2px; /* Minimal margin for tighter space */
+}
+
+.card-title a:hover {
+    color: #aed581;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.6; /* Slightly increased line-height for better readability */
+    margin-top: 2px; /* Minimal top margin to reduce space */
+    flex-grow: 1;
+    text-align: justify;
+}
+
+/* Specific fix for iPads or similar-sized tablets */
+@media (max-width: 1024px) {
+    .card-text {
+        text-align: left; /* Change to left alignment to prevent large gaps */
+        text-justify: none; /* Disable inter-word justification on iPads */
+    }
+
+    .card-body {
+        height: auto; /* Allow flexible height */
+    }
+
+    .card-title a {
+        font-size: 1.2rem; /* Ensure readability */
+    }
+
+    .card-img-top {
+        width: 90%;
+    }
+}
+
+/* Yoga Section */
+#yoga-corner h2 {
+    color: #aed581;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.ratio {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #313c4a, #243952, #192c4e);  
+    color: #d3e3f2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Social Media Icons */
+.social-media .btn {
+    font-size: 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d3e3f2;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media .btn:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 30px #a4c6ff, 0 0 50px #8faeff; /* Text-shadow inside the icon */
+    color: #ffffff;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .card-title a {
+        font-size: 1.1rem;
+    }
+
+    .card-img-top {
+        width: 80%;
+        height: auto;
+    }
+
+    .card-body {
+        padding: 10px;
+        height: auto;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

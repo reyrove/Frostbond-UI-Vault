@@ -1,0 +1,126 @@
+/* === Global Styles === */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(30, 35, 50, 0.8), rgba(15, 25, 40, 0.8)),
+        url('artstudio.png') center/cover no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* === Header === */
+header {
+    background: linear-gradient(135deg, #0b3d0b, #217c1f);
+    padding: 20px;
+    position: relative;
+}
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+header p {
+    font-size: 1.1rem;
+    margin: 10px 0 0;
+}
+.burger-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* === Sidebar === */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: #155b12;
+    padding-top: 60px;
+    display: none;
+    z-index: 999;
+}
+.btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.sidebar .btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+}
+.sidebar .btn:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* === Gallery Section === */
+.gallery-section,
+.editor-section {
+    margin: 40px auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.editor-description {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* === Footer === */
+footer {
+    background: linear-gradient(135deg, #0b3d0b, #217c1f);
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+.social-media .btn {
+    color: #d3e3f2;
+    font-size: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+.social-media .btn:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffd6ba;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+        padding-right: 40px;
+    }
+    .sidebar .btn {
+        font-size: 1rem;
+    }
+}
