@@ -41,6 +41,6 @@ If you’re loving it, just give a shoutout to @Reyrove (Reyhaneh Daneshdoost) s
 
 ---
 
-Questions or collabs? Hit up Reyrove on Twitter or GitHub — links inside the template!
+Questions or collabs? Hit up Reyrove on Twitter or GitHub!
 
 Stay cool, stay creative, stay unstoppable! ❄️🔥✨
