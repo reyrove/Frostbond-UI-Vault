@@ -39,12 +39,8 @@ FrostBond Portfolio is **free to use, remix, and roll out** for personal or prof
 
 If you’re loving it, just give a shoutout to @Reyrove (Reyhaneh Daneshdoost) somewhere on your site or in your credits. Sharing is caring!
 
-## License 📝
-
-[MIT License](LICENSE) — do your thing, just keep it chill and legit.
-
 ---
 
-Questions or collabs? Hit up Reyrove on Twitter or GitHub — links inside the template!
+Questions or collabs? Hit up Reyrove on Twitter or GitHub!
 
 Stay cool, stay creative, stay unstoppable! ❄️🔥✨
