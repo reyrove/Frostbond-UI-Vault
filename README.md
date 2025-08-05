@@ -35,6 +35,8 @@ A set of 🔥 (read: ❄️) UI projects like:
 Use it. Fork it. Build that portfolio.
 Just don’t forget to **credit us** like a good netizen:
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ```
 UI Templates by Frostbond Coders, powered by Sparrow Hawk AI & Reyrove
 ```
